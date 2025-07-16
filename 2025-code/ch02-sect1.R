@@ -37,6 +37,11 @@ w
 p <- c(1, 2, TRUE, FALSE, FALSE, TRUE)
 p
 
+p <- c("1", "2", TRUE, FALSE, FALSE, TRUE)
+p
+
+
+
 d <-  c(1,2,3,4,5,6,7,8,9,10)
 sum(d)
 sum(2*d)
@@ -53,3 +58,19 @@ v1
 v2 <- sum(d)/length(d)
 v2
 
+v1 <- 50:90
+v1
+v2 <- c(1,2,5, 50:90)
+v2
+
+v3 <- seq(1,101,3)
+v3
+v4 <- seq(0.1,1.0,0.1)
+v4
+
+v5 <- rep(1,times=5)
+v5
+v6 <- rep(1:5,times=5)
+v6
+v7 <- rep(c(1,5,9),times=5)
+v7
