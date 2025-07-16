@@ -74,3 +74,9 @@ v6 <- rep(1:5,times=5)
 v6
 v7 <- rep(c(1,5,9),times=5)
 v7
+
+rep(1:4, 2)
+rep(1:4, each = 2)       # not the same.
+rep(1:4, c(2,2,2,2))     # same as second.
+rep(1:4, c(2,1,2,1))
+rep(1:4, each = 2, length.out = 4)    # first 4 only.
