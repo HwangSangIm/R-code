@@ -60,3 +60,28 @@ boxplot(Petal.Width ~ Species, data=iris,main="품종별 꽃잎의 높이")
 boxplot(Petal.Width ~ Species, data=iris,main="품종별 꽃잎의 높이")
 
 boxplot(Sepal.Length ~ Species , data=iris, main="품종별 꽃의 길이")
+
+mtcars
+head(mtcars)
+str(mtcars)
+summary(mtcars)
+
+par(mfrow=c(1,3))
+
+barplot(table(mtcars$carb),
+        main="Barplot of Carburetors",
+        xlab = "#of carburetors",
+        ylab = "frequency",
+        col="blue")
+barplot(table(mtcars$cyl),
+        main="Barplot of Cylinder",
+        xlab = "#of cylender",
+        ylab = "frequency",
+        col = "red")
+barplot(table(mtcars$gear),
+        main="Barplot of Gear",
+        xlab = "#of gears",
+        ylab = "frequency",
+        col = "Green")
+par(mfrow=c(1,1))
+
