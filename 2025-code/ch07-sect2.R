@@ -80,3 +80,4 @@ for(i in 1:ncol(com)){
 choose(5,3)
 choose(5,4)
 choose(5,2)
+
