@@ -81,3 +81,30 @@ boxplot.stats(st$Income)$stats
 boxplot.stats(st$Income)$n
 boxplot.stats(st$Income)$conf
 boxplot.stats(st$Income)$out
+
+v1 <- c(1,7,6,8,4,2,3)
+sort(v1)
+order(v1)
+
+v1[order(v1)]
+paste(v1[1], v1[6], v1[7], v1[5],v1[3],v1[2],v1[4])
+v1 <- sort(v1)
+v1
+v2 <- sort(v1, decreasing = T)
+v2
+
+head(iris)
+order(iris$Sepal.Length)
+range(iris$Sepal.Length)
+iris[order(iris$Sepal.Length),]
+iris[order(iris$Sepal.Length)[1],] [1]
+iris(order(iris$Sepal.Length)[nrow(iris)])
+
+iris[order(iris$Sepal.Length , decreasing = T),]
+iris.new <- iris[order(iris$Sepal.Length),]
+head(iris.new)
+iris[order(iris$Species, -iris$Petal.Length, decreasing = T),]
+
+iris[order(iris$Species, iris$Petal.Length , decreasing = T),]
+iris[order(iris$Species,-iris$Petal.Length),]
+
