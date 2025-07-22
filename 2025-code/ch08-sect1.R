@@ -229,13 +229,34 @@ ds.y <- iris$Species[-dup]
 str(ds.y)
 length(ds.y)
 
-tsne <- Rtsne(ds,dims=2,perplexity=10)
+tsne <- Rtsne(ds,dims=3,perplexity=10)
 tsne
 
 tsne$Y
-
 df.tsne <- data.frame(tsne$Y)
 head(df.tsne)
-ggplot(df.tsne, aes(x=X1,y=X2, color=ds.y)) +
+ggplot(df.tsne, aes(x=X1,y=X2,z=X3, color=ds.y)) +
   geom_point(size=2)
 
+install.packages(c("rgl","car"))
+library(rgl)
+library(car)
+library(mgcv)
+library(Rtsne)
+
+tsne <- Rtsne(ds,dims=3,perplexity=10)
+df.tsne <- data.frame(tsne$Y)
+head(df.tsne)
+
+scatter3d(x=df.tsne$X1,y=df.tsne$X2,z=df.tsne$X3)
+
+points <- as.integer(ds.y)
+points
+color <- c('red','green','blue')
+
+scatter3d(x=df.tsne$X1,y=df.tsne$X2,z=df.tsne$X3,
+          point.col = color[points],
+          surface = FALSE)
+scatter3d(x=df.tsne$X1,y=df.tsne$X2,z=df.tsne$X3,
+          point.col = color[points],
+          surface = T)
